@@ -1,0 +1,33 @@
+---
+import Details from "./Details.astro";
+import Skills from "./Skills.astro";
+import Profile from "./Profile.astro";
+import Jobs from "./Jobs.astro";
+import Degree from "./Degree.astro";
+import Tech from "./Tech.astro";
+---
+<div class="row top-line mt-5 pt-5">
+  <div class="col-4">
+    <Details />
+
+    <Skills />
+  </div>
+  <div class="col-8 left-line">
+    <div class="row">
+      <div class="col">
+        <div>
+          <Profile />
+        </div>
+        <div class="top-line mt-4 pt-4">
+          <Jobs />
+        </div>      
+        <div class="top-line mt-4 pt-4">
+          <Degree />
+        </div>
+        <div class="top-line mt-4 pt-4">
+          <Tech />
+        </div>        
+      </div>
+    </div>
+  </div>
+<div>

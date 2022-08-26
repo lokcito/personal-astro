@@ -1,0 +1,14 @@
+  .top-line {border-top: 1px solid #ccc;}
+  .left-line {border-left: 1px solid #ccc;}
+  .underline {height: 5px; width: 30px; border-top: 4px solid #555; display: block; margin-bottom: 20px}
+  .pl-4 {padding-left: 15px;}
+    table { page-break-inside:auto }
+		    tr    { page-break-inside:avoid; page-break-after:auto }
+		    thead { display:table-header-group }
+		    tfoot { display:table-footer-group }
+			@page{
+			  size: A4;
+			  margin-top: 50px;
+			  margin-bottom: 50px;
+			}  
+  h4 {color: #444}
