@@ -18,7 +18,8 @@ let permalink = "https://rayrojas.info/english";
 let allPosts = await Astro.glob("./posts/*.md");
 allPosts = allPosts.sort(
 	(a, b) =>
-		new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+		new Date(b.frontmatter.publishDate).valueOf() -
+		new Date(a.frontmatter.publishDate).valueOf(),
 );
 
 // Full Astro Component Syntax:
@@ -62,27 +63,31 @@ allPosts = allPosts.sort(
 				font-size: 2.5rem;
 				font-weight: 700;
 			}
-			
 		</style>
 	</head>
 
 	<body>
 		<main class="container">
 			<NavHeader />
-      <History />
-      <div class="mb-5 pb-5"></div>
+			<History />
+			<div class="mb-5 pb-5"></div>
 		</main>
-    <!-- ===============================================-->
-    <!--    JavaScripts-->
-    <!-- ===============================================-->
-    <script is:inline src="/vendors/@popperjs/popper.min.js"></script>
-    <script is:inline src="/vendors/bootstrap/bootstrap.min.js"></script>
-    <script is:inline src="/vendors/is/is.min.js"></script>
-    <script is:inline src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script is:inline src="/vendors/fontawesome/all.min.js"></script>
-    <script is:inline src="/assets/js/theme.js"></script>
+		<!-- ===============================================-->
+		<!--    JavaScripts-->
+		<!-- ===============================================-->
+		<script is:inline src="/vendors/@popperjs/popper.min.js"></script>
+		<script is:inline src="/vendors/bootstrap/bootstrap.min.js"></script>
+		<script is:inline src="/vendors/is/is.min.js"></script>
+		<script
+			is:inline
+			src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"
+		></script>
+		<script is:inline src="/vendors/fontawesome/all.min.js"></script>
+		<script is:inline src="/assets/js/theme.js"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Volkhov:wght@700&amp;display=swap" rel="stylesheet">
-
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Volkhov:wght@700&display=swap"
+			rel="stylesheet"
+		/>
 	</body>
 </html>
